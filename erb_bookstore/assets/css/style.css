@@ -1,0 +1,4835 @@
+/* =================================
+   1. PENGATURAN DASAR
+================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f4ed;
+  color: #30251f;
+  line-height: 1.6;
+}
+
+/* =================================
+   2. NAVIGASI WEBSITE
+================================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 8%;
+
+  background-color: #4b3025;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* LOGO */
+
+.logo {
+  color: #f8f4ed;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+/* NAVIGATION LINKS */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  list-style: none;
+}
+
+.nav-links a {
+  color: #f8f4ed;
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d6b995;
+}
+
+/* LOGOUT */
+
+.logout-form {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+
+  padding: 0;
+  margin: 0;
+
+  color: #f8f4ed;
+  font-family: inherit;
+  font-size: 15px;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+  color: #d6b995;
+}
+
+/* =================================
+   3. HALAMAN UTAMA - HERO SECTION
+================================= */
+
+.hero {
+    min-height: 500px;
+    padding: 70px 40px;
+    margin: 40px auto;
+    max-width: 1200px;
+
+    background: linear-gradient(
+        135deg,
+        #efe5d7,
+        #f8f4ed
+    );
+
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* CONTAINER */
+
+.hero-container {
+    max-width: 1100px;
+    min-height: 360px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 50px;
+}
+
+/* CONTENT */
+
+.hero-content {
+    text-align: left;
+}
+
+.hero-label {
+    color: #8a5a3c;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    color: #30251f;
+    font-family: Georgia, serif;
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: #8a5a3c;
+}
+
+.hero-content p {
+    color: #76675e;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+    max-width: 520px;
+}
+
+/* BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hero-buttons .btn,
+.hero-buttons .btn-secondary {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.hero-buttons .btn {
+    background: #4b3025;
+    color: white;
+}
+
+.hero-buttons .btn:hover {
+    background: #704b37;
+}
+
+.hero-buttons .btn-secondary {
+    color: #4b3025;
+    border: 1px solid #4b3025;
+}
+
+.hero-buttons .btn-secondary:hover {
+    background: #4b3025;
+    color: white;
+}
+
+/* VISUAL */
+
+.hero-visual {
+    min-height: 390px;
+    background: #e9dfd2;
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+/* BOOKS */
+
+.hero-book {
+    width: 175px;
+    height: 245px;
+    border-radius: 4px 10px 10px 4px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    box-shadow: 8px 10px 15px rgba(0,0,0,.15);
+}
+
+.hero-book-one {
+    background: #4b3025;
+    color: #f8f4ed;
+    transform: rotate(-8deg);
+    z-index: 2;
+}
+
+.hero-book-two {
+    background: #8a5a3c;
+    color: white;
+    transform: rotate(8deg) translateY(15px);
+    margin-left: -35px;
+}
+
+.hero-book span {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    letter-spacing: 4px;
+}
+
+.hero-book strong {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.hero-book small {
+    font-size: 11px;
+    font-style: italic;
+}
+
+.hero-decoration {
+    position: absolute;
+    bottom: 22px;
+    color: #704b37;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 45px 20px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-visual {
+        min-height: 330px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons a {
+        text-align: center;
+    }
+
+    .hero-book {
+        width: 140px;
+        height: 205px;
+    }
+}
+
+/* HERO TITLE */
+
+.hero h1 {
+  max-width: 750px;
+
+  font-size: 46px;
+  font-weight: bold;
+
+  line-height: 1.2;
+
+  color: #4b3025;
+
+  margin-bottom: 20px;
+}
+
+/* HERO DESCRIPTION */
+
+.hero p {
+  max-width: 550px;
+
+  font-size: 17px;
+  color: #705b4c;
+
+  margin-bottom: 30px;
+}
+
+/* HERO BUTTON */
+
+.hero .btn {
+  padding: 14px 32px;
+
+  background-color: #704b37;
+  color: #ffffff;
+
+  border-radius: 6px;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #4b3025;
+  transform: translateY(-3px);
+
+  box-shadow: 0 5px 15px rgba(75, 48, 37, 0.2);
+}
+
+/* =================================
+   4. TOMBOL
+================================= */
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #704b37;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #4b3025;
+}
+
+/* =================================
+   5. KONTEN HALAMAN
+================================= */
+
+.container {
+  width: 84%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+/* =================================
+   6. FOOTER
+================================= */
+
+.footer {
+  background-color: #4b3025;
+  color: #f8f4ed;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* =================================
+   7. RESPONSIVE
+================================= */
+/* =================================
+   RESPONSIVE NAVBAR
+================================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px 5%;
+  }
+
+  .logo {
+    font-size: 23px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .nav-links a,
+  .logout-btn {
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+
+.hero {
+  min-height: 350px;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
+}
+
+.hero p {
+  font-size: 15px;
+}
+
+/* =================================
+   8. LOGOUT BUTTON
+================================= */
+
+.logout-form {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.logout-btn {
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  color: #f8f4ed;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logout-btn:hover {
+  color: #d6b995;
+}
+/* SEARCH FORM */
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  margin: 25px 0;
+  flex-wrap: wrap;
+}
+
+.search-form input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.search-form button,
+.search-form a {
+  display: inline-block;
+  padding: 12px 20px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* =================================
+   9. FEATURED BOOKS
+================================= */
+
+.featured-books {
+  margin: 70px 0;
+}
+
+.featured-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.featured-heading h2 {
+  font-size: 30px;
+  color: #4b3025;
+  margin-bottom: 8px;
+}
+
+.featured-heading p {
+  color: #705b4c;
+  font-size: 15px;
+}
+
+/* BOOK GRID */
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* BOOK CARD */
+
+.book-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* BOOK COVER */
+
+.book-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  background-color: #efe5d7;
+  padding: 15px;
+}
+
+.no-cover {
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #efe5d7;
+  color: #705b4c;
+  font-size: 13px;
+}
+
+/* BOOK INFORMATION */
+
+.book-info {
+  padding: 18px;
+}
+
+.book-info h3 {
+  font-size: 17px;
+  color: #4b3025;
+  margin-bottom: 5px;
+}
+
+.book-info p {
+  font-size: 14px;
+  color: #705b4c;
+  margin-bottom: 8px;
+}
+
+.book-info span {
+  font-size: 12px;
+  color: #8a6b55;
+}
+
+.book-info h4 {
+  font-size: 16px;
+  color: #704b37;
+  margin-top: 12px;
+}
+
+/* RESPONSIVE FEATURED BOOKS */
+
+@media (max-width: 768px) {
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .book-card img,
+  .no-cover {
+    height: 190px;
+  }
+}
+
+@media (max-width: 420px) {
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =================================
+   10. ABOUT ERB SECTION
+================================= */
+
+.about-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 70px 40px;
+  margin: 70px 0;
+
+  background-color: #efe5d7;
+  border-radius: 12px;
+
+  text-align: center;
+}
+
+.about-content {
+  max-width: 700px;
+}
+
+.about-label {
+  display: block;
+
+  color: #8a6b55;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  margin-bottom: 12px;
+}
+
+.about-content h2 {
+  color: #4b3025;
+  font-size: 32px;
+
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  color: #705b4c;
+  font-size: 15px;
+  line-height: 1.8;
+
+  margin-bottom: 15px;
+}
+
+.about-content .btn {
+  margin-top: 15px;
+}
+
+/* RESPONSIVE ABOUT */
+
+@media (max-width: 768px) {
+  .about-preview {
+    padding: 50px 20px;
+  }
+
+  .about-content h2 {
+    font-size: 26px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+}
+
+/* =================================
+   11. FOOTER WEBSITE
+================================= */
+
+.footer {
+  background-color: #4b3025;
+  color: #f8f4ed;
+
+  margin-top: 80px;
+  padding: 55px 8% 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 50px;
+
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.footer-section h3 {
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+
+.footer-section p {
+  color: #dfd0c2;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #dfd0c2;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-section a:hover {
+  color: #d6b995;
+  padding-left: 5px;
+}
+
+/* COPYRIGHT */
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(248, 244, 237, 0.2);
+
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #dfd0c2;
+  font-size: 13px;
+}
+
+/* RESPONSIVE FOOTER */
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer {
+    padding: 40px 7% 20px;
+  }
+}
+
+/* =================================
+   12. CUSTOMER BOOK CATALOG
+================================= */
+
+.books-section {
+  margin: 40px 0;
+}
+
+.books-section > p {
+  color: #705b4c;
+  margin-bottom: 25px;
+}
+
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.book-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 18px;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+  background: #efe5d7;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.book-card h3 {
+  color: #4b3025;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.book-card p {
+  color: #705b4c;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.book-card form {
+  margin-top: 12px;
+}
+
+.book-card input[type="number"] {
+  width: 65px;
+  padding: 9px;
+  border: 1px solid #d6b995;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.book-card .btn {
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .books-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .books-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =================================
+   13. BOOK DETAIL PAGE
+================================= */
+
+.book-detail {
+  margin: 40px 0;
+}
+
+.detail-container {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 50px;
+
+  background: #ffffff;
+  padding: 35px;
+
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+/* BOOK COVER */
+
+.detail-cover {
+  background: #efe5d7;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 420px;
+  padding: 25px;
+}
+
+.detail-cover img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+}
+
+.detail-cover .no-cover {
+  width: 100%;
+}
+
+/* BOOK INFORMATION */
+
+.detail-category {
+  display: inline-block;
+  color: #8a6b55;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.detail-info h1 {
+  color: #4b3025;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.detail-author {
+  color: #705b4c;
+  margin-bottom: 20px;
+}
+
+.detail-divider {
+  border-top: 1px solid #e5ddd3;
+  margin: 20px 0;
+}
+
+.detail-info > p {
+  color: #705b4c;
+  margin-bottom: 12px;
+}
+
+.detail-price {
+  color: #704b37;
+  font-size: 25px;
+  margin: 22px 0;
+}
+
+/* DESCRIPTION */
+
+.detail-description {
+  margin: 25px 0;
+}
+
+.detail-description h3 {
+  color: #4b3025;
+  margin-bottom: 10px;
+}
+
+.detail-description p {
+  color: #705b4c;
+  line-height: 1.8;
+}
+
+/* CART FORM */
+
+.detail-cart-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+
+.detail-cart-form label {
+  color: #4b3025;
+  font-weight: bold;
+}
+
+.detail-cart-form input {
+  width: 75px;
+  padding: 10px;
+  border: 1px solid #d6b995;
+  border-radius: 5px;
+}
+
+.detail-cart-form button {
+  border: none;
+  cursor: pointer;
+}
+
+.back-button {
+  display: inline-block;
+  color: #704b37;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.back-button:hover {
+  color: #4b3025;
+}
+
+.out-of-stock {
+  color: #a33b32 !important;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.book-not-found {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.book-not-found h1 {
+  color: #4b3025;
+  margin-bottom: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .detail-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 20px;
+  }
+
+  .detail-cover {
+    min-height: 300px;
+  }
+
+  .detail-cover img {
+    max-height: 320px;
+  }
+
+  .detail-info h1 {
+    font-size: 25px;
+  }
+}
+
+/* =================================
+   ORDER HISTORY CUSTOMER
+================================= */
+
+.order-history-page {
+  padding: 45px 0 70px;
+}
+
+.order-history-heading {
+  margin-bottom: 30px;
+}
+
+.order-history-heading .section-label {
+  color: #8a5a3c;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.order-history-heading h1 {
+  color: #4b3025;
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.order-history-heading p {
+  color: #78665a;
+}
+
+/* SUMMARY */
+
+.order-history-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.history-summary-card {
+  background: #ffffff;
+  border: 1px solid #e8ded2;
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.history-summary-card span {
+  color: #78665a;
+  font-size: 14px;
+}
+
+.history-summary-card h2 {
+  color: #4b3025;
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+/* ORDER LIST */
+
+.order-history-list > h2 {
+  color: #4b3025;
+  margin-bottom: 20px;
+}
+
+.order-history-card {
+  background: #ffffff;
+  border: 1px solid #e8ded2;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 18px;
+}
+
+.order-card-top,
+.order-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.order-date {
+  color: #8a7567;
+  font-size: 13px;
+}
+
+.order-card-top h3 {
+  color: #4b3025;
+  margin-top: 7px;
+}
+
+.order-status {
+  padding: 7px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.order-status.pending {
+  background: #fff1d6;
+  color: #946200;
+}
+
+.order-status.processing {
+  background: #e5edff;
+  color: #315a9b;
+}
+
+.order-status.shipped {
+  background: #e5f3f0;
+  color: #287568;
+}
+
+.order-status.completed {
+  background: #e3f2e5;
+  color: #34733b;
+}
+
+.order-status.cancelled {
+  background: #fbe5e5;
+  color: #a33a3a;
+}
+
+/* INFORMATION */
+
+.order-card-information {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 22px 0;
+  margin: 18px 0;
+  border-top: 1px solid #eee5dc;
+  border-bottom: 1px solid #eee5dc;
+}
+
+.order-card-information div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order-card-information span {
+  color: #8a7567;
+  font-size: 13px;
+}
+
+.order-card-information strong {
+  color: #4b3025;
+  font-size: 14px;
+}
+
+/* BOTTOM */
+
+.order-card-bottom > span {
+  color: #8a7567;
+  font-size: 13px;
+}
+
+.order-card-bottom .btn {
+  display: inline-block;
+  background: #4b3025;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 7px;
+  text-decoration: none;
+}
+
+.order-card-bottom .btn:hover {
+  background: #704b37;
+}
+
+/* EMPTY STATE */
+
+.empty-orders {
+  text-align: center;
+  padding: 55px 20px;
+  background: #ffffff;
+  border: 1px solid #e8ded2;
+  border-radius: 12px;
+}
+
+.empty-orders h3 {
+  color: #4b3025;
+}
+
+.empty-orders p {
+  color: #78665a;
+  margin: 12px 0 22px;
+}
+
+.empty-orders .btn {
+  display: inline-block;
+  background: #4b3025;
+  color: white;
+  padding: 11px 20px;
+  border-radius: 7px;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .order-history-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .order-card-information {
+    grid-template-columns: 1fr;
+  }
+
+  .order-card-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .order-card-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .order-history-heading h1 {
+    font-size: 28px;
+  }
+}
+
+/* ========================================
+   ORDER HISTORY - ERB BOOKSTORE
+======================================== */
+
+.order-history-page {
+  padding: 45px 0 70px;
+}
+
+/* PAGE HEADING */
+
+.order-history-heading {
+  margin-bottom: 35px;
+}
+
+.order-history-heading .section-label {
+  color: #8a5a3c;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.order-history-heading h1 {
+  color: #4b3025;
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.order-history-heading p {
+  color: #78665a;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* SUMMARY */
+
+.order-history-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 45px;
+}
+
+.history-summary-card {
+  background: #ffffff;
+  border: 1px solid #e8ded2;
+  border-radius: 12px;
+  padding: 25px;
+  transition: 0.3s ease;
+}
+
+.history-summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(75, 48, 37, 0.08);
+}
+
+.history-summary-card span {
+  color: #78665a;
+  font-size: 14px;
+}
+
+.history-summary-card h2 {
+  color: #4b3025;
+  font-size: 30px;
+  margin-top: 12px;
+}
+
+/* ORDER LIST */
+
+.order-history-list > h2 {
+  color: #4b3025;
+  font-size: 23px;
+  margin-bottom: 22px;
+}
+
+/* ORDER CARD */
+
+.order-history-card {
+  background: #ffffff;
+  border: 1px solid #e8ded2;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+}
+
+.order-history-card:hover {
+  box-shadow: 0 8px 20px rgba(75, 48, 37, 0.06);
+}
+
+/* CARD TOP */
+
+.order-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.order-date {
+  color: #8a7567;
+  font-size: 13px;
+}
+
+.order-card-top h3 {
+  color: #4b3025;
+  font-size: 17px;
+  margin-top: 8px;
+}
+
+/* ORDER STATUS */
+
+.order-status {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.order-status.pending {
+  background: #fff1d6;
+  color: #946200;
+}
+
+.order-status.processing {
+  background: #e5edff;
+  color: #315a9b;
+}
+
+.order-status.shipped {
+  background: #e5f3f0;
+  color: #287568;
+}
+
+.order-status.completed {
+  background: #e3f2e5;
+  color: #34733b;
+}
+
+.order-status.cancelled {
+  background: #fbe5e5;
+  color: #a33a3a;
+}
+
+/* ORDER INFORMATION */
+
+.order-card-information {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 22px 0;
+  margin: 20px 0;
+  border-top: 1px solid #eee5dc;
+  border-bottom: 1px solid #eee5dc;
+}
+
+.order-card-information div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order-card-information span {
+  color: #8a7567;
+  font-size: 13px;
+}
+
+.order-card-information strong {
+  color: #4b3025;
+  font-size: 14px;
+}
+
+/* CARD BOTTOM */
+
+.order-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.order-card-bottom > span {
+  color: #8a7567;
+  font-size: 13px;
+}
+
+/* DETAIL BUTTON */
+
+.order-card-bottom .btn {
+  display: inline-block;
+  background: #4b3025;
+  color: #ffffff;
+  padding: 11px 20px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.order-card-bottom .btn:hover {
+  background: #704b37;
+}
+
+/* EMPTY ORDER */
+
+.empty-orders {
+  text-align: center;
+  padding: 55px 20px;
+  background: #ffffff;
+  border: 1px solid #e8ded2;
+  border-radius: 12px;
+}
+
+.empty-orders h3 {
+  color: #4b3025;
+  font-size: 20px;
+}
+
+.empty-orders p {
+  color: #78665a;
+  margin: 12px 0 22px;
+}
+
+.empty-orders .btn {
+  display: inline-block;
+  background: #4b3025;
+  color: #ffffff;
+  padding: 11px 20px;
+  border-radius: 7px;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .order-history-page {
+    padding: 30px 0 50px;
+  }
+
+  .order-history-heading h1 {
+    font-size: 28px;
+  }
+
+  .order-history-summary {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .order-card-information {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .order-card-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .order-card-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .order-history-card {
+    padding: 20px;
+  }
+}
+
+/* ========================================
+   PAYMENT RECEIPT MODAL
+======================================== */
+
+.order-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.order-actions a,
+.receipt-button {
+  display: inline-block;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 7px;
+  background: #4b3025;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.order-actions a:hover,
+.receipt-button:hover {
+  background: #704b37;
+}
+
+/* MODAL */
+
+.receipt-modal[hidden] {
+  display: none;
+}
+
+.receipt-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.receipt-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 20, 15, 0.65);
+  backdrop-filter: blur(3px);
+}
+
+/* RECEIPT BOX */
+
+.receipt-box {
+  position: relative;
+  z-index: 2;
+  background: #f8f4ed;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  animation: receiptAppear 0.25s ease;
+}
+
+@keyframes receiptAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CLOSE BUTTON */
+
+.receipt-close {
+  position: absolute;
+  top: 12px;
+  right: 17px;
+  border: none;
+  background: transparent;
+  color: #4b3025;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* RECEIPT CONTENT */
+
+.receipt-content {
+  background: #ffffff;
+  border: 1px solid #e8ded2;
+  padding: 25px 20px;
+  border-radius: 8px;
+}
+
+.receipt-header {
+  text-align: center;
+}
+
+.receipt-header h2 {
+  color: #4b3025;
+  font-family: Georgia, serif;
+  font-size: 25px;
+  margin-bottom: 6px;
+}
+
+.receipt-header p {
+  color: #8a7567;
+  font-size: 11px;
+}
+
+.receipt-header span {
+  display: block;
+  color: #4b3025;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+
+.receipt-divider {
+  border-top: 1px dashed #c9b9a8;
+  margin: 20px 0;
+}
+
+/* RECEIPT INFORMATION */
+
+.receipt-information p {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  color: #78665a;
+  font-size: 12px;
+  margin: 12px 0;
+}
+
+.receipt-information strong {
+  color: #4b3025;
+  text-align: right;
+}
+
+/* PURCHASE DETAILS */
+
+.receipt-content h3 {
+  color: #4b3025;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.receipt-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 15px 0;
+  color: #4b3025;
+  font-size: 12px;
+}
+
+.receipt-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.receipt-item small {
+  color: #8a7567;
+  font-size: 11px;
+}
+
+.receipt-item > strong {
+  white-space: nowrap;
+}
+
+/* TOTAL */
+
+.receipt-total p {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  color: #78665a;
+  font-size: 12px;
+  margin: 12px 0;
+}
+
+.receipt-total strong {
+  color: #4b3025;
+}
+
+.receipt-grand-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding-top: 15px;
+  border-top: 1px solid #e8ded2;
+}
+
+.receipt-grand-total span {
+  color: #4b3025;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.receipt-grand-total strong {
+  color: #4b3025;
+  font-size: 17px;
+}
+
+/* RECEIPT FOOTER */
+
+.receipt-footer {
+  text-align: center;
+}
+
+.receipt-footer p {
+  color: #78665a;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.receipt-footer strong {
+  color: #4b3025;
+  font-family: Georgia, serif;
+  font-size: 15px;
+}
+
+/* PRINT BUTTON */
+
+.receipt-print-button {
+  display: block;
+  width: 100%;
+  margin-top: 18px;
+  padding: 13px;
+  border: none;
+  border-radius: 7px;
+  background: #4b3025;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.receipt-print-button:hover {
+  background: #704b37;
+}
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+  .receipt-box {
+    padding: 20px 15px;
+    max-height: 92vh;
+  }
+
+  .receipt-content {
+    padding: 20px 15px;
+  }
+
+  .receipt-information p {
+    font-size: 11px;
+  }
+
+  .receipt-grand-total strong {
+    font-size: 14px;
+  }
+}
+
+/* ADMIN ORDER SHORTCUT */
+
+.admin-order-shortcut {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: #ffffff;
+  border: 1px solid #e8ded2;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 30px 0;
+}
+
+.admin-order-shortcut h2 {
+  color: #4b3025;
+  margin-bottom: 10px;
+}
+
+.admin-order-shortcut p {
+  color: #78665a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.admin-order-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #4b3025;
+  color: #ffffff;
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.admin-order-button:hover {
+  background: #704b37;
+}
+
+@media (max-width: 600px) {
+  .admin-order-shortcut {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ========================================
+   CUSTOMER MESSAGE PAGE
+   ERB BOOKSTORE
+======================================== */
+
+.message-page {
+  min-height: 75vh;
+  padding: 75px 20px;
+  background:
+    radial-gradient(circle at top right, #efe5d7 0, transparent 40%), #f8f4ed;
+}
+
+.message-container {
+  max-width: 680px;
+  margin: auto;
+  padding: 45px;
+  background: #ffffff;
+  border: 1px solid #e8ded2;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(75, 48, 37, 0.08);
+}
+
+/* HEADING */
+
+.message-container h1 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  color: #4b3025;
+  margin-bottom: 12px;
+}
+
+.message-container p {
+  color: #78665a;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* FORM */
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.message-form label {
+  color: #4b3025;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.message-form input,
+.message-form textarea {
+  width: 100%;
+  padding: 14px 15px;
+  background: #fdfbf8;
+  border: 1px solid #ded3c7;
+  border-radius: 8px;
+  color: #30251f;
+  font-size: 14px;
+  outline: none;
+}
+
+.message-form input:focus,
+.message-form textarea:focus {
+  border-color: #8a5a3c;
+  box-shadow: 0 0 0 3px rgba(138, 90, 60, 0.1);
+}
+
+.message-form input::placeholder,
+.message-form textarea::placeholder {
+  color: #aa9b8e;
+}
+
+.message-form textarea {
+  min-height: 170px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+/* SEND BUTTON */
+
+.btn-send-message {
+  margin-top: 15px;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #4b3025;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-send-message:hover {
+  background: #704b37;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(75, 48, 37, 0.15);
+}
+
+/* ALERT */
+
+.message-alert {
+  padding: 14px 16px;
+  margin-bottom: 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.message-alert.success {
+  background: #edf4e9;
+  border: 1px solid #d3e4cc;
+  color: #3d6638;
+}
+
+.message-alert.error {
+  background: #f9eae7;
+  border: 1px solid #efd0ca;
+  color: #922f25;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  .message-page {
+    padding: 40px 15px;
+  }
+
+  .message-container {
+    padding: 28px 20px;
+    border-radius: 12px;
+  }
+
+  .message-container h1 {
+    font-size: 27px;
+  }
+}
+
+
+/* =================================
+   CUSTOMER MESSAGE CENTER
+================================= */
+
+.customer-message-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px 70px;
+}
+
+.customer-message-heading {
+    margin-bottom: 30px;
+}
+
+.customer-message-heading h1 {
+    color: #4b3025;
+    margin-bottom: 10px;
+}
+
+.customer-message-heading p {
+    color: #76675e;
+}
+
+/* CARD */
+
+.customer-message-card,
+.customer-message-item {
+    background: #fff;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.05);
+    margin-bottom: 25px;
+}
+
+.customer-message-card h2,
+.customer-message-history h2 {
+    color: #4b3025;
+    margin-bottom: 10px;
+}
+
+.customer-message-card > p {
+    color: #76675e;
+    margin-bottom: 22px;
+}
+
+/* FORM */
+
+.customer-message-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.customer-message-form label {
+    color: #4b3025;
+    font-weight: bold;
+}
+
+.customer-message-form input,
+.customer-message-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d8cec3;
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.customer-message-form textarea {
+    resize: vertical;
+}
+
+.customer-message-form input:focus,
+.customer-message-form textarea:focus {
+    outline: none;
+    border-color: #8a5a3c;
+}
+
+.btn-send-message {
+    padding: 13px;
+    background: #4b3025;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-send-message:hover {
+    background: #704b37;
+}
+
+/* HISTORY */
+
+.customer-message-history {
+    margin-top: 45px;
+}
+
+.message-history-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.message-history-heading span {
+    color: #76675e;
+    font-size: 14px;
+}
+
+.customer-message-item-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.customer-message-item-heading h3 {
+    color: #4b3025;
+}
+
+.message-date {
+    display: block;
+    margin-top: 10px;
+    color: #887970;
+}
+
+/* MESSAGE CONTENT */
+
+.customer-original-message {
+    margin-top: 20px;
+}
+
+.customer-original-message strong {
+    color: #4b3025;
+}
+
+.customer-original-message p {
+    background: #f8f4ed;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.customer-admin-reply {
+    margin-top: 20px;
+    padding: 18px;
+    background: #edf3e9;
+    border-left: 4px solid #527a4f;
+    border-radius: 7px;
+}
+
+.customer-admin-reply strong {
+    color: #315b30;
+}
+
+.customer-admin-reply p {
+    margin-top: 10px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.customer-admin-reply small {
+    display: block;
+    margin-top: 12px;
+    color: #61735c;
+}
+
+.waiting-admin-reply {
+    margin-top: 18px;
+    padding: 13px;
+    background: #f8f4ed;
+    color: #76675e;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+/* STATUS */
+
+.message-status {
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.message-status.unread {
+    background: #fff0d8;
+    color: #8b5b19;
+}
+
+.message-status.read {
+    background: #e8edf5;
+    color: #405b80;
+}
+
+.message-status.replied {
+    background: #e6f1e4;
+    color: #315b30;
+}
+
+/* ALERT */
+
+.message-alert {
+    padding: 13px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+.message-alert.success {
+    background: #e6f1e4;
+    color: #315b30;
+}
+
+.message-alert.error {
+    background: #f8e5e2;
+    color: #922f25;
+}
+
+/* EMPTY */
+
+.empty-customer-message {
+    text-align: center;
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.empty-customer-message h3 {
+    color: #4b3025;
+    margin-bottom: 10px;
+}
+
+.empty-customer-message p {
+    color: #76675e;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .customer-message-page {
+        padding: 30px 15px 50px;
+    }
+
+    .customer-message-card,
+    .customer-message-item {
+        padding: 20px;
+    }
+
+    .message-history-heading {
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+
+/* =====================================
+   ERB BOOKSTORE - ABOUT US
+===================================== */
+
+.about-hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 25px;
+    background: #f0e8dc;
+}
+
+.about-hero-content {
+    max-width: 750px;
+}
+
+.about-label {
+    display: inline-block;
+    color: #8a5a3c;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.about-hero h1 {
+    color: #30251f;
+    font-size: 42px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.about-hero h1 span {
+    display: block;
+    color: #8a5a3c;
+}
+
+.about-hero p {
+    max-width: 600px;
+    margin: 0 auto 28px;
+    color: #76675e;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.about-btn {
+    display: inline-block;
+    padding: 13px 25px;
+    background: #4b3025;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.about-btn:hover {
+    background: #704b37;
+    transform: translateY(-2px);
+}
+
+
+/* INTRODUCTION */
+
+.about-introduction {
+    max-width: 1150px;
+    margin: auto;
+    padding: 90px 25px;
+    display: grid;
+    grid-template-columns: 1.3fr .7fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.about-intro-content h2 {
+    color: #4b3025;
+    font-size: 32px;
+    line-height: 1.4;
+    margin-bottom: 22px;
+}
+
+.about-intro-content p {
+    color: #76675e;
+    line-height: 1.9;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.about-intro-decoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-book-icon {
+    width: 230px;
+    height: 290px;
+    background: #4b3025;
+    border-radius: 5px 15px 15px 5px;
+    border-left: 12px solid #30251f;
+    box-shadow: 12px 12px 0 #d8c5ad;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f8f4ed;
+    gap: 12px;
+    text-align: center;
+}
+
+.about-book-icon span {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    letter-spacing: 5px;
+}
+
+.about-book-icon strong {
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+.about-book-icon small {
+    font-style: italic;
+    color: #d8c5ad;
+}
+
+
+/* VISION AND MISSION */
+
+.about-purpose {
+    background: #f8f4ed;
+    padding: 85px 25px;
+}
+
+.about-section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.about-section-heading h2 {
+    color: #4b3025;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.about-section-heading p {
+    color: #76675e;
+    line-height: 1.7;
+}
+
+.about-purpose-grid {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.about-purpose-card {
+    background: #fff;
+    padding: 35px;
+    border-radius: 10px;
+    border: 1px solid #e8dfd4;
+}
+
+.about-purpose-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0e8dc;
+    color: #704b37;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-purpose-card h3 {
+    color: #4b3025;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.about-purpose-card p,
+.about-purpose-card li {
+    color: #76675e;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.about-purpose-card ul {
+    padding-left: 20px;
+}
+
+.about-purpose-card li {
+    margin-bottom: 10px;
+}
+
+
+/* PHILOSOPHY */
+
+.about-philosophy {
+    padding: 90px 25px;
+    background: #fff;
+    text-align: center;
+}
+
+.about-philosophy-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.about-philosophy h2 {
+    color: #4b3025;
+    font-family: Georgia, serif;
+    font-size: 31px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.about-philosophy p {
+    color: #76675e;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.about-philosophy strong {
+    color: #8a5a3c;
+    font-style: italic;
+    letter-spacing: .5px;
+}
+
+
+/* CLOSING */
+
+.about-closing {
+    background: #4b3025;
+    text-align: center;
+    padding: 75px 25px;
+}
+
+.about-closing h2 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.about-closing p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    color: #e5ddd2;
+    line-height: 1.8;
+}
+
+.about-closing .about-btn {
+    background: #f0e8dc;
+    color: #4b3025;
+}
+
+.about-closing .about-btn:hover {
+    background: #fff;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .about-hero {
+        min-height: 350px;
+    }
+
+    .about-hero h1 {
+        font-size: 32px;
+    }
+
+    .about-introduction {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 60px 22px;
+    }
+
+    .about-intro-content h2 {
+        font-size: 26px;
+    }
+
+    .about-purpose-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section-heading h2 {
+        font-size: 27px;
+    }
+
+    .about-philosophy h2 {
+        font-size: 25px;
+    }
+
+    .about-closing h2 {
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .about-hero h1 {
+        font-size: 28px;
+    }
+
+    .about-book-icon {
+        width: 190px;
+        height: 250px;
+    }
+
+    .about-purpose-card {
+        padding: 25px;
+    }
+
+}
+
+
+/* GET TO KNOW US */
+
+.get-to-know {
+    padding: 90px 25px;
+    background: #fff;
+}
+
+.get-to-know-container {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.get-to-know-image {
+    min-height: 400px;
+    background: #f0e8dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.book-decoration {
+    width: 210px;
+    height: 280px;
+    background: #4b3025;
+    border-left: 12px solid #30251f;
+    border-radius: 4px 12px 12px 4px;
+    box-shadow: 12px 12px 0 #d8c5ad;
+    color: #f8f4ed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.book-decoration span {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    letter-spacing: 5px;
+}
+
+.book-decoration strong {
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.book-decoration small {
+    color: #d8c5ad;
+    font-style: italic;
+}
+
+.section-label {
+    color: #8a5a3c;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.get-to-know-content h2 {
+    color: #30251f;
+    font-size: 34px;
+    line-height: 1.3;
+    margin: 15px 0 20px;
+}
+
+.get-to-know-content h2 span {
+    display: block;
+    color: #8a5a3c;
+}
+
+.get-to-know-content > p {
+    color: #76675e;
+    line-height: 1.8;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.get-to-know-values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 28px 0;
+}
+
+.get-to-know-values div {
+    border-left: 2px solid #8a5a3c;
+    padding-left: 10px;
+}
+
+.get-to-know-values strong,
+.get-to-know-values span {
+    display: block;
+}
+
+.get-to-know-values strong {
+    color: #4b3025;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.get-to-know-values span {
+    color: #76675e;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .get-to-know-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .get-to-know-image {
+        min-height: 300px;
+    }
+
+    .get-to-know-content h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .get-to-know-values {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =================================
+   ERB BOOKSTORE - LOGIN PAGE
+================================= */
+
+.login-page {
+    padding: 70px 20px;
+    background: #f8f4ed;
+}
+
+.login-container {
+    max-width: 1050px;
+    min-height: 570px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(48, 37, 31, 0.10);
+}
+
+/* LEFT SIDE */
+
+.login-decoration {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 45px;
+    overflow: hidden;
+    color: #f8f4ed;
+    background: linear-gradient(145deg, #4b3025, #79543e);
+}
+
+.login-label {
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.login-brand {
+    position: relative;
+    z-index: 2;
+}
+
+.login-brand h1 {
+    font-family: inherit;
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 22px;
+}
+
+.login-brand p {
+    max-width: 340px;
+    color: #e7d9ca;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.login-book-decoration {
+    position: absolute;
+    right: 35px;
+    bottom: 105px;
+    transform: rotate(-9deg);
+}
+
+.login-book {
+    width: 155px;
+    height: 205px;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #4b3025;
+    background: #e8d9c6;
+    border-left: 9px solid #c3a88c;
+    border-radius: 4px 9px 9px 4px;
+    box-shadow: 12px 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.login-book span {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.login-book strong {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.login-book small {
+    font-size: 10px;
+    font-style: italic;
+}
+
+.login-tagline {
+    position: relative;
+    z-index: 2;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #d9c8b5;
+}
+
+/* RIGHT SIDE */
+
+.login-form-area {
+    padding: 65px 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-small-label {
+    color: #98775e;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.login-form-header h2 {
+    margin: 12px 0;
+    color: #4b3025;
+    font-size: 38px;
+}
+
+.login-form-header p {
+    color: #82756c;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+/* INPUT */
+
+.login-input-group {
+    margin-bottom: 23px;
+}
+
+.login-input-group label {
+    display: block;
+    margin-bottom: 9px;
+    color: #4b3025;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.login-input-group input {
+    width: 100%;
+    padding: 15px 16px;
+    border: 1px solid #e4dcd3;
+    border-radius: 8px;
+    outline: none;
+    background: #fcfaf7;
+    color: #30251f;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.login-input-group input:focus {
+    border-color: #79543e;
+    box-shadow: 0 0 0 3px rgba(121, 84, 62, 0.10);
+}
+
+/* LOGIN BUTTON */
+
+.login-submit {
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    background: #4b3025;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-submit:hover {
+    background: #79543e;
+}
+
+.login-submit span {
+    font-size: 20px;
+}
+
+/* LINKS */
+
+.login-links {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.login-links p {
+    color: #82756c;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.login-links a {
+    color: #79543e;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+.login-divider {
+    width: 100%;
+    height: 1px;
+    margin: 17px 0;
+    background: #eee7df;
+}
+
+/* ERROR */
+
+.login-error {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    background: #fff0ed;
+    color: #a33d32;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .login-page {
+        padding: 35px 15px;
+    }
+
+    .login-container {
+        grid-template-columns: 1fr;
+    }
+
+    .login-decoration {
+        min-height: 300px;
+        padding: 30px;
+    }
+
+    .login-brand h1 {
+        font-size: 38px;
+    }
+
+    .login-book-decoration {
+        right: 25px;
+        bottom: 45px;
+        transform: scale(0.7) rotate(-9deg);
+        transform-origin: bottom right;
+    }
+
+    .login-form-area {
+        padding: 40px 28px;
+    }
+
+}
+
+
+/* =================================
+   ERB BOOKSTORE - ADMIN LOGIN
+================================= */
+
+.admin-login-page {
+    padding: 70px 20px;
+    background: #f8f4ed;
+}
+
+.admin-login-container {
+    max-width: 1050px;
+    min-height: 570px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(48, 37, 31, 0.10);
+}
+
+/* LEFT PANEL */
+
+.admin-login-decoration {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 45px;
+    overflow: hidden;
+    color: #f8f4ed;
+    background: linear-gradient(145deg, #302019, #62432f);
+}
+
+.admin-brand-label {
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.admin-login-brand h1 {
+    margin: 35px 0 20px;
+    font-size: 48px;
+    line-height: 1.15;
+}
+
+.admin-login-brand p {
+    max-width: 330px;
+    color: #dfd0c1;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* DASHBOARD ILLUSTRATION */
+
+.admin-illustration {
+    position: absolute;
+    right: 35px;
+    bottom: 105px;
+    transform: rotate(-7deg);
+}
+
+.admin-panel-card {
+    width: 210px;
+    height: 155px;
+    overflow: hidden;
+    background: #eee3d5;
+    border-radius: 10px;
+    box-shadow: 12px 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.admin-panel-top {
+    height: 27px;
+    padding: 9px;
+    display: flex;
+    gap: 5px;
+    background: #c9ad92;
+}
+
+.admin-panel-top span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #72533e;
+}
+
+.admin-panel-content {
+    padding: 17px;
+}
+
+.admin-panel-line {
+    width: 100%;
+    height: 6px;
+    margin-bottom: 9px;
+    border-radius: 5px;
+    background: #b9a18a;
+}
+
+.admin-panel-line.short {
+    width: 45%;
+}
+
+.admin-panel-line.medium {
+    width: 70%;
+}
+
+.admin-panel-boxes {
+    display: flex;
+    gap: 9px;
+    margin: 13px 0;
+}
+
+.admin-panel-boxes span {
+    flex: 1;
+    height: 35px;
+    border-radius: 5px;
+    background: #d2bca5;
+}
+
+.admin-login-tagline {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #d9c8b5;
+}
+
+/* RIGHT PANEL */
+
+.admin-login-form-area {
+    padding: 65px 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.admin-form-label {
+    color: #98775e;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.admin-login-heading h2 {
+    margin: 12px 0;
+    color: #4b3025;
+    font-size: 38px;
+}
+
+.admin-login-heading p {
+    margin-bottom: 35px;
+    color: #82756c;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* INPUT */
+
+.admin-login-input {
+    margin-bottom: 23px;
+}
+
+.admin-login-input label {
+    display: block;
+    margin-bottom: 9px;
+    color: #4b3025;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.admin-login-input input {
+    width: 100%;
+    padding: 15px 16px;
+    border: 1px solid #e4dcd3;
+    border-radius: 8px;
+    outline: none;
+    background: #fcfaf7;
+    color: #30251f;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.admin-login-input input:focus {
+    border-color: #79543e;
+    box-shadow: 0 0 0 3px rgba(121, 84, 62, 0.10);
+}
+
+/* BUTTON */
+
+.admin-login-submit {
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    background: #302019;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-login-submit:hover {
+    background: #79543e;
+}
+
+.admin-login-submit span {
+    font-size: 20px;
+}
+
+/* BOTTOM */
+
+.admin-login-bottom {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.admin-login-divider {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 20px;
+    background: #eee7df;
+}
+
+.admin-login-bottom a {
+    color: #79543e;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.admin-login-bottom a:hover {
+    text-decoration: underline;
+}
+
+.admin-login-bottom p {
+    margin-top: 22px;
+    color: #a3978d;
+    font-size: 10px;
+}
+
+/* ERROR */
+
+.admin-login-error {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    background: #fff0ed;
+    color: #a33d32;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .admin-login-page {
+        padding: 35px 15px;
+    }
+
+    .admin-login-container {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-login-decoration {
+        min-height: 300px;
+        padding: 30px;
+    }
+
+    .admin-login-brand h1 {
+        font-size: 37px;
+    }
+
+    .admin-illustration {
+        right: 25px;
+        bottom: 35px;
+        transform: scale(0.7) rotate(-7deg);
+        transform-origin: bottom right;
+    }
+
+    .admin-login-form-area {
+        padding: 40px 28px;
+    }
+
+}
+
+
+/* =================================
+   ERB BOOKSTORE - REGISTER PAGE
+================================= */
+
+.register-page {
+    padding: 65px 20px;
+    background: #f8f4ed;
+}
+
+.register-container {
+    max-width: 1050px;
+    min-height: 650px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(48, 37, 31, 0.10);
+}
+
+/* LEFT PANEL */
+
+.register-decoration {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 45px;
+    overflow: hidden;
+    color: #f8f4ed;
+    background: linear-gradient(145deg, #4b3025, #79543e);
+}
+
+.register-brand-label {
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.register-brand-content {
+    position: relative;
+    z-index: 2;
+}
+
+.register-brand-content h1 {
+    font-size: 43px;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.register-brand-content p {
+    max-width: 330px;
+    color: #e7d9ca;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* BOOK DECORATION */
+
+.register-book-decoration {
+    position: absolute;
+    right: 35px;
+    bottom: 110px;
+    transform: rotate(-9deg);
+}
+
+.register-book {
+    width: 145px;
+    height: 190px;
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #4b3025;
+    background: #e8d9c6;
+    border-left: 9px solid #c3a88c;
+    border-radius: 4px 9px 9px 4px;
+    box-shadow: 12px 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.register-book span {
+    font-size: 29px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.register-book strong {
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.register-book small {
+    font-size: 10px;
+    font-style: italic;
+}
+
+.register-tagline {
+    position: relative;
+    z-index: 2;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #d9c8b5;
+}
+
+/* RIGHT PANEL */
+
+.register-form-area {
+    padding: 45px 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.register-small-label {
+    color: #98775e;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.register-form-header h2 {
+    margin: 10px 0;
+    color: #4b3025;
+    font-size: 35px;
+}
+
+.register-form-header p {
+    margin-bottom: 25px;
+    color: #82756c;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* INPUT */
+
+.register-input-group {
+    margin-bottom: 17px;
+}
+
+.register-input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4b3025;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.register-input-group input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #e4dcd3;
+    border-radius: 8px;
+    outline: none;
+    background: #fcfaf7;
+    color: #30251f;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.register-input-group input:focus {
+    border-color: #79543e;
+    box-shadow: 0 0 0 3px rgba(121, 84, 62, 0.10);
+}
+
+/* BUTTON */
+
+.register-submit {
+    width: 100%;
+    padding: 14px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    background: #4b3025;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-submit:hover {
+    background: #79543e;
+}
+
+.register-submit span {
+    font-size: 19px;
+}
+
+/* LOGIN LINK */
+
+.register-login-link {
+    margin-top: 23px;
+    text-align: center;
+}
+
+.register-login-link p {
+    color: #82756c;
+    font-size: 12px;
+}
+
+.register-login-link a {
+    color: #79543e;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.register-login-link a:hover {
+    text-decoration: underline;
+}
+
+/* ERROR */
+
+.register-error {
+    padding: 11px 14px;
+    margin-bottom: 18px;
+    border-radius: 7px;
+    background: #fff0ed;
+    color: #a33d32;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .register-page {
+        padding: 35px 15px;
+    }
+
+    .register-container {
+        grid-template-columns: 1fr;
+    }
+
+    .register-decoration {
+        min-height: 290px;
+        padding: 30px;
+    }
+
+    .register-brand-content h1 {
+        font-size: 34px;
+    }
+
+    .register-book-decoration {
+        right: 20px;
+        bottom: 35px;
+        transform: scale(0.7) rotate(-9deg);
+        transform-origin: bottom right;
+    }
+
+    .register-form-area {
+        padding: 35px 28px;
+    }
+
+}
+
+/* =================================
+   ERB NAVBAR LOGO CONTAINER
+================================= */
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 145px;
+    padding: 8px 12px;
+
+    background: #fffaf4;
+    border: 1px solid #e5d7c8;
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(48, 37, 31, 0.08);
+    text-decoration: none;
+
+    transition: transform 0.2s ease;
+}
+
+.navbar-logo:hover {
+    transform: translateY(-2px);
+}
+
+.navbar-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .navbar-logo {
+        width: 115px;
+        padding: 7px 9px;
+    }
+}
+
+/* NAVIGATION BUTTONS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 17px;
+
+    color: #fffaf4;
+    text-decoration: none;
+    font-size: 14px;
+
+    border: 1px solid rgba(255, 250, 244, 0.25);
+    border-radius: 8px;
+
+    transition: all 0.25s ease;
+}
+
+/* HOVER EFFECT */
+
+.nav-links a:hover {
+    background-color: #fffaf4;
+    color: #4b3025;
+    border-color: #fffaf4;
+    transform: translateY(-2px);
+}
+
+/* LOGOUT BUTTON */
+
+.logout-btn {
+    padding: 9px 17px;
+    background: transparent;
+    color: #fffaf4;
+
+    border: 1px solid rgba(255, 250, 244, 0.25);
+    border-radius: 8px;
+
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.logout-btn:hover {
+    background-color: #fffaf4;
+    color: #4b3025;
+    transform: translateY(-2px);
+} 
+
+
+/* =========================================
+   ERB BOOKSTORE - CUSTOMER DETAIL PESANAN
+========================================= */
+
+.order-detail-page {
+    max-width: 1050px;
+    width: 92%;
+    margin: 55px auto 80px;
+    color: #30251f;
+}
+
+/* PAGE HEADING */
+
+.order-detail-heading {
+    margin-bottom: 30px;
+}
+
+.order-detail-heading .section-label {
+    color: #98765e;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.order-detail-heading h1 {
+    color: #4b3025;
+    font-family: inherit;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.order-detail-heading > p:last-child {
+    color: #8b7b70;
+    font-size: 14px;
+}
+
+/* SUCCESS BANNER */
+
+.order-detail-page .order-success {
+    position: relative;
+    overflow: hidden;
+    padding: 27px 30px;
+    margin-bottom: 25px;
+    background: #f2eee5;
+    border: 1px solid #e4d9c9;
+    border-radius: 14px;
+}
+
+.order-success h2 {
+    color: #4b3025;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.order-success p {
+    color: #837264;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* INFORMATION CARD */
+
+.order-detail-page .order-information,
+.order-detail-page .order-items {
+    padding: 27px 30px;
+    margin-bottom: 23px;
+    background: #fffdfa;
+    border: 1px solid #e9dfd5;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(75, 48, 37, 0.035);
+}
+
+.order-information h2,
+.order-items > h2 {
+    color: #4b3025;
+    font-size: 18px;
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #eee5dc;
+}
+
+/* ORDER INFORMATION */
+
+.order-information p {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 13px 0;
+    margin: 0;
+    border-bottom: 1px solid #f1ebe5;
+    color: #8b7b70;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.order-information p:last-child {
+    display: block;
+    border-bottom: none;
+}
+
+.order-information p strong {
+    color: #4b3025;
+    font-weight: 600;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.order-information p:last-child br + * {
+    color: #4b3025;
+}
+
+/* BOOK ITEMS */
+
+.order-detail-page .order-item {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    padding: 17px 19px;
+    margin-bottom: 13px;
+    background: #faf7f2;
+    border: 1px solid #eee5dc;
+    border-radius: 10px;
+}
+
+.order-item h3 {
+    color: #4b3025;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.order-item p {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 0;
+    color: #86766a;
+    font-size: 13px;
+}
+
+.order-item p:last-child {
+    color: #624531;
+    font-weight: 600;
+}
+
+.order-detail-page .order-items hr {
+    display: none;
+}
+
+/* PAYMENT SUMMARY */
+
+.order-detail-page .order-total {
+    padding-top: 20px;
+    margin-top: 22px;
+    border-top: 1px solid #e9dfd5;
+}
+
+.order-total p {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 14px;
+    color: #89796d;
+    font-size: 13px;
+}
+
+.order-total p strong {
+    color: #4b3025;
+    font-weight: 600;
+}
+
+.order-total h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 19px 20px;
+    margin: 20px 0 0;
+    background: #f2e9df;
+    border: none;
+    border-radius: 10px;
+    color: #4b3025;
+    font-size: 15px;
+}
+
+.order-total h2 {
+    font-size: 15px;
+}
+
+.order-total h2::first-line {
+    color: #624531;
+}
+
+/* ACTION BUTTONS */
+
+.order-detail-page .order-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.order-actions a,
+.order-actions button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 45px;
+    padding: 12px 20px;
+    border: 1px solid #4b3025;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.order-actions .receipt-button {
+    background: #4b3025;
+    color: #fffdfa;
+}
+
+.order-actions .receipt-button:hover {
+    background: #694936;
+}
+
+.order-actions a {
+    background: #fffdfa;
+    color: #624531;
+    border-color: #dfd1c3;
+}
+
+.order-actions a:hover {
+    background: #f2e9df;
+    border-color: #cbb7a4;
+}
+
+/* =========================================
+   RECEIPT MODAL
+========================================= */
+
+.order-detail-page ~ .receipt-modal[hidden],
+.receipt-modal[hidden] {
+    display: none !important;
+}
+
+.receipt-modal:not([hidden]) {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.receipt-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(35, 25, 19, 0.72);
+    backdrop-filter: blur(3px);
+}
+
+.receipt-box {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 490px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 28px;
+    background: #fffdfa;
+    border: 1px solid #e9dfd5;
+    border-radius: 13px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.receipt-close {
+    position: absolute;
+    top: 13px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: #f2e9df;
+    color: #4b3025;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.receipt-content {
+    padding: 10px 3px;
+    color: #30251f;
+}
+
+.receipt-header {
+    text-align: center;
+}
+
+.receipt-header h2 {
+    color: #4b3025;
+    font-family: inherit;
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.receipt-header p {
+    color: #927e6d;
+    font-size: 11px;
+    margin-bottom: 22px;
+}
+
+.receipt-header span {
+    color: #6f4e37;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.receipt-divider {
+    border-top: 1px dashed #d8c8b9;
+    margin: 20px 0;
+}
+
+.receipt-information p,
+.receipt-total p {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 13px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.receipt-information p strong,
+.receipt-total p strong {
+    text-align: right;
+    color: #4b3025;
+}
+
+.receipt-content > h3 {
+    color: #4b3025;
+    font-size: 14px;
+    margin-bottom: 17px;
+}
+
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 15px 0;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.receipt-item > div {
+    min-width: 0;
+}
+
+.receipt-item small {
+    display: block;
+    margin-top: 5px;
+    color: #927e6d;
+}
+
+.receipt-item > strong {
+    flex-shrink: 0;
+    color: #4b3025;
+}
+
+.receipt-grand-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    margin-top: 18px;
+    background: #f2e9df;
+    border-radius: 8px;
+    color: #4b3025;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.receipt-grand-total strong {
+    font-size: 16px;
+}
+
+.receipt-footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.receipt-footer p {
+    color: #927e6d;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.receipt-footer strong {
+    color: #4b3025;
+    font-size: 14px;
+}
+
+.receipt-print-button {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    background: #4b3025;
+    border: none;
+    border-radius: 8px;
+    color: #fffdfa;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.receipt-print-button:hover {
+    background: #694936;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+
+    .order-detail-page {
+        width: 92%;
+        margin: 35px auto 55px;
+    }
+
+    .order-detail-heading h1 {
+        font-size: 28px;
+    }
+
+    .order-detail-page .order-information,
+    .order-detail-page .order-items {
+        padding: 21px 18px;
+    }
+
+    .order-information p {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .order-information p strong {
+        text-align: left;
+    }
+
+    .order-total h2 {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .order-detail-page .order-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .order-actions a,
+    .order-actions button {
+        width: 100%;
+    }
+
+    .receipt-box {
+        padding: 23px 18px;
+    }
+}
+
+
+
+/* =========================================
+   ERB BOOKSTORE - SHOPPING CART
+========================================= */
+
+.cart-container {
+    width: 92%;
+    max-width: 1150px;
+    margin: 55px auto 80px;
+    color: #30251f;
+}
+
+/* HEADER */
+
+.cart-header {
+    margin-bottom: 32px;
+}
+
+.cart-header h1 {
+    color: #4b3025;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.cart-header p {
+    color: #8b7b70;
+    font-size: 14px;
+}
+
+/* MAIN LAYOUT */
+
+.cart-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    align-items: start;
+    gap: 25px;
+}
+
+/* CART LIST */
+
+.cart-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 23px;
+    background: #fffdfa;
+    border: 1px solid #e9dfd5;
+    border-radius: 13px;
+    box-shadow: 0 4px 15px rgba(75, 48, 37, 0.035);
+}
+
+/* BOOK COVER */
+
+.cart-book-cover {
+    width: 115px;
+    height: 155px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: #f2e9df;
+    border: 1px solid #e9dfd5;
+    border-radius: 7px;
+}
+
+.cart-book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart-book-cover .no-cover {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #927e6d;
+    font-size: 12px;
+}
+
+/* BOOK INFORMATION */
+
+.cart-book-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.cart-book-info h3 {
+    color: #4b3025;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 9px;
+}
+
+.cart-book-info > p {
+    color: #8b7b70;
+    font-size: 13px;
+    margin-bottom: 9px;
+    line-height: 1.5;
+}
+
+.cart-book-info > p strong {
+    color: #4b3025;
+}
+
+.cart-book-info > p:last-child {
+    margin-top: 17px;
+    padding-top: 13px;
+    border-top: 1px solid #eee5dc;
+    color: #624531;
+}
+
+/* QUANTITY FORM */
+
+.cart-book-info form {
+    margin-top: 14px;
+}
+
+.cart-book-info form label {
+    display: block;
+    color: #715b4c;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.cart-book-info form input[type="number"] {
+    width: 75px;
+    height: 37px;
+    padding: 7px 10px;
+    background: #fffdfa;
+    border: 1px solid #dfd1c3;
+    border-radius: 7px;
+    color: #4b3025;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+}
+
+.cart-book-info form input[type="number"]:focus {
+    border-color: #8a5a3c;
+    box-shadow: 0 0 0 3px rgba(138, 90, 60, 0.1);
+}
+
+/* BUTTONS */
+
+.cart-book-info form button,
+.cart-summary .btn,
+.empty-cart .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/* UPDATE BUTTON */
+
+.cart-book-info form button[type="submit"] {
+    background: #f0e7dd;
+    color: #624531;
+    border: 1px solid #e4d5c6;
+}
+
+.cart-book-info form button[type="submit"]:hover {
+    background: #e5d5c5;
+}
+
+/* REMOVE BUTTON */
+
+.cart-book-info form + form button {
+    background: #fff5f2;
+    color: #a34c3c;
+    border: 1px solid #efd8d1;
+}
+
+.cart-book-info form + form button:hover {
+    background: #f8e4df;
+}
+
+/* SUMMARY */
+
+.cart-summary {
+    position: sticky;
+    top: 25px;
+    padding: 25px;
+    background: #fffdfa;
+    border: 1px solid #e9dfd5;
+    border-radius: 13px;
+    box-shadow: 0 4px 15px rgba(75, 48, 37, 0.045);
+}
+
+.cart-summary h2 {
+    color: #4b3025;
+    font-size: 18px;
+    margin-bottom: 22px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee5dc;
+}
+
+.cart-summary p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 17px;
+    color: #8b7b70;
+    font-size: 13px;
+}
+
+.cart-summary p strong {
+    color: #4b3025;
+    text-align: right;
+}
+
+.cart-summary .btn {
+    width: 100%;
+    min-height: 45px;
+    margin-top: 12px;
+    background: #4b3025;
+    color: #fffdfa;
+    font-size: 13px;
+}
+
+.cart-summary .btn:hover {
+    background: #694936;
+}
+
+/* EMPTY CART */
+
+.empty-cart {
+    padding: 65px 25px;
+    background: #fffdfa;
+    border: 1px dashed #d9c8b8;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.empty-cart h2 {
+    color: #4b3025;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.empty-cart p {
+    color: #8b7b70;
+    font-size: 13px;
+    margin-bottom: 23px;
+}
+
+.empty-cart .btn {
+    background: #4b3025;
+    color: #fffdfa;
+    padding: 12px 22px;
+}
+
+.empty-cart .btn:hover {
+    background: #694936;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .cart-content {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-summary {
+        position: static;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .cart-container {
+        margin-top: 35px;
+    }
+
+    .cart-header h1 {
+        font-size: 26px;
+    }
+
+    .cart-item {
+        gap: 14px;
+        padding: 15px;
+    }
+
+    .cart-book-cover {
+        width: 85px;
+        height: 120px;
+    }
+
+    .cart-book-info h3 {
+        font-size: 14px;
+    }
+
+    .cart-book-info > p {
+        font-size: 12px;
+    }
+
+    .cart-book-info form button {
+        margin-top: 8px;
+    }
+
+    .cart-summary {
+        padding: 20px;
+    }
+
+}
+
+
+
+/* =========================================
+   ERB BOOKSTORE - CHECKOUT PAGE
+========================================= */
+
+.checkout-page {
+    width: 92%;
+    max-width: 1150px;
+    margin: 55px auto 80px;
+    color: #30251f;
+}
+
+.checkout-page > h1 {
+    color: #4b3025;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.checkout-page > p {
+    color: #8b7b70;
+    font-size: 14px;
+    margin-bottom: 32px;
+}
+
+/* MAIN LAYOUT */
+
+.checkout-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 350px;
+    align-items: start;
+    gap: 25px;
+}
+
+/* FORM CARD */
+
+.checkout-form {
+    background: #fffdfa;
+    border: 1px solid #e9dfd5;
+    border-radius: 13px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(75, 48, 37, 0.035);
+}
+
+.checkout-form h2 {
+    color: #4b3025;
+    font-size: 19px;
+    margin: 5px 0 23px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #eee5dc;
+}
+
+.checkout-form h2:not(:first-child) {
+    margin-top: 32px;
+}
+
+/* LABEL */
+
+.checkout-form label {
+    display: block;
+    color: #624b3c;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+/* INPUT */
+
+.checkout-form textarea,
+.checkout-form select {
+    width: 100%;
+    padding: 13px 14px;
+    margin-bottom: 22px;
+    background: #fffdfa;
+    border: 1px solid #dfd1c3;
+    border-radius: 8px;
+    color: #30251f;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.checkout-form textarea {
+    min-height: 115px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.checkout-form textarea:focus,
+.checkout-form select:focus {
+    border-color: #8a5a3c;
+    box-shadow: 0 0 0 3px rgba(138, 90, 60, 0.1);
+}
+
+/* PAYMENT OPTIONS */
+
+.payment-method-options {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 18px 0 25px;
+}
+
+.payment-method-options label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 65px;
+    padding: 13px;
+    margin: 0;
+    background: #fffaf4;
+    border: 1px solid #e9dfd5;
+    border-radius: 9px;
+    color: #624b3c;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.payment-method-options label:hover {
+    background: #f4ebe2;
+    border-color: #b99b81;
+}
+
+.payment-method-options input[type="radio"] {
+    accent-color: #79543e;
+    flex-shrink: 0;
+}
+
+/* PAYMENT INFORMATION */
+
+.payment-info {
+    padding: 22px;
+    margin: 20px 0;
+    background: #f8f3ed;
+    border: 1px solid #e8dbce;
+    border-radius: 10px;
+}
+
+.payment-info h3 {
+    color: #4b3025;
+    font-size: 16px;
+    margin-bottom: 17px;
+}
+
+.payment-info p {
+    color: #715b4c;
+    font-size: 13px;
+    margin-bottom: 11px;
+    line-height: 1.6;
+}
+
+.payment-info strong {
+    color: #4b3025;
+}
+
+.payment-note {
+    margin-top: 15px;
+    padding-top: 13px;
+    border-top: 1px solid #e5d8ca;
+    color: #927b68 !important;
+    font-size: 12px !important;
+    line-height: 1.6;
+}
+
+/* QRIS */
+
+.qris-image {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    margin: 15px auto;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #e9dfd5;
+    border-radius: 9px;
+}
+
+/* PAYMENT PROOF */
+
+#proof-section {
+    padding: 22px;
+    margin: 22px 0;
+    background: #fffaf4;
+    border: 1px dashed #cdb9a6;
+    border-radius: 10px;
+}
+
+#proof-section h2 {
+    margin-top: 0;
+}
+
+#proof-section input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    background: #fffdfa;
+    border: 1px solid #e4d8cc;
+    border-radius: 8px;
+    color: #715b4c;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+#proof-section small {
+    display: block;
+    color: #927b68;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* SUBMIT BUTTON */
+
+.checkout-form button[type="submit"] {
+    width: 100%;
+    min-height: 48px;
+    margin-top: 15px;
+    background: #4b3025;
+    border: none;
+    border-radius: 8px;
+    color: #fffdfa;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.checkout-form button[type="submit"]:hover {
+    background: #694936;
+    transform: translateY(-1px);
+}
+
+/* ORDER SUMMARY */
+
+.checkout-summary {
+    position: sticky;
+    top: 25px;
+    padding: 25px;
+    background: #fffdfa;
+    border: 1px solid #e9dfd5;
+    border-radius: 13px;
+    box-shadow: 0 4px 15px rgba(75, 48, 37, 0.045);
+}
+
+.checkout-summary h2 {
+    color: #4b3025;
+    font-size: 19px;
+    margin-bottom: 22px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee5dc;
+}
+
+/* INDIVIDUAL ITEMS */
+
+.checkout-item {
+    padding: 5px 0 16px;
+}
+
+.checkout-item h3 {
+    color: #4b3025;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 6px;
+}
+
+.checkout-item p {
+    color: #8b7b70;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+.checkout-item p:last-child {
+    color: #624531;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.checkout-summary hr {
+    border: none;
+    border-top: 1px solid #eee5dc;
+    margin: 13px 0;
+}
+
+/* PRICE SUMMARY */
+
+.checkout-summary > p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    color: #8b7b70;
+    font-size: 12px;
+    margin: 16px 0;
+}
+
+.checkout-summary > p strong {
+    color: #4b3025;
+    text-align: right;
+}
+
+.checkout-summary > h3 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #e9dfd5;
+    color: #624531;
+    font-size: 14px;
+}
+
+.checkout-summary > h3 span {
+    color: #4b3025;
+    font-size: 23px;
+}
+
+/* ERROR MESSAGE */
+
+.checkout-page .error-message {
+    padding: 17px 20px;
+    margin: 20px 0;
+    background: #fff4f0;
+    border: 1px solid #efd5ca;
+    border-radius: 9px;
+    color: #a34c3c;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.checkout-page > a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #79543e;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* HIDDEN ELEMENTS */
+
+.checkout-page [hidden] {
+    display: none !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .checkout-container {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-summary {
+        position: static;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .checkout-page {
+        margin-top: 35px;
+    }
+
+    .checkout-page > h1 {
+        font-size: 27px;
+    }
+
+    .checkout-form {
+        padding: 20px;
+    }
+
+    .payment-method-options {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-method-options label {
+        min-height: 50px;
+    }
+
+    .checkout-summary {
+        padding: 20px;
+    }
+
+}
+
